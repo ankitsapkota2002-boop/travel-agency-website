@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SkyVoyage Travel - Book Flights & Hotels</title>
+  <meta name="description" content="Book cheap flights and hotels worldwide with SkyVoyage Travel Agency"/>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <h1>Ankit Travels</h1>
+      <p>Discover the world with the best flight and hotel deals</p>
+
+      <div class="tabs">
+        <div class="tab active" data-tab="flights">Flights</div>
+        <div class="tab" data-tab="hotels">Hotels</div>
+        <div class="tab" data-tab="packages">Flight + Hotel</div>
+      </div>
+
+      <div class="search-form" id="searchForm">
+        <!-- Flights Form -->
+        <div id="flights-form" class="form-active">
+          <div class="form-grid">
+            <input type="text" id="from" placeholder="From (City/Airport)" required />
+            <input type="text" id="to" placeholder="To (City/Airport)" required />
+            <input type="date" id="departDate" required />
+            <input type="date" id="returnDate" />
+            <select id="passengers">
+              <option>1 Passenger</option>
+              <option>2 Passengers</option>
+              <option>3 Passengers</option>
+              <option>4+ Passengers</option>
+            </select>
+            <select>
+              <option>Economy</option>
+              <option>Premium Economy</option>
+              <option>Business</option>
+              <option>First Class</option>
+            </select>
+          </div>
+          <button class="full-width" onclick="searchFlights()">Search Flights</button>
+        </div>
+
+        <!-- Hotels Form -->
+        <div id="hotels-form">
+          <div class="form-grid">
+            <input type="text" placeholder="Destination or Hotel Name" required />
+            <input type="date" required />
+            <input type="date" required />
+            <input type="number" placeholder="Guests" min="1" value="2" />
+            <input type="number" placeholder="Rooms" min="1" value="1" />
+          </div>
+          <button class="full-width" onclick="searchHotels()">Search Hotels</button>
+        </div>
+
+        <!-- Packages Form -->
+        <div id="packages-form">
+          <div class="form-grid">
+            <input type="text" placeholder="From (City)" required />
+            <input type="text" placeholder="To (Destination)" required />
+            <input type="date" required />
+            <input type="date" required />
+            <select>
+              <option>2 Adults</option>
+              <option>2 Adults + 1 Child</option>
+              <option>2 Adults + 2 Children</option>
+              <option>Family Package</option>
+            </select>
+          </div>
+          <button class="full-width" onclick="searchPackages()">Search Packages</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="destinations">
+    <div class="container">
+      <h2>Popular Destinations</h2>
+      <div class="cards">
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&q=80" alt="Bali"/>
+          <div class="card-body">
+            <h3>Bali, Indonesia</h3>
+            <p class="price">From $599</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1519904981064-b0cfaffd0234?ixlib=rb-4.0.3&auto=format&fit=crop&q=80" alt="Paris"/>
+          <div class="card-body">
+            <h3>Paris, France</h3>
+            <p class="price">From $399</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1540979384820-4d3b9f1e1263?ixlib=rb-4.0.3&auto=format&fit=crop&q=80" alt="Tokyo"/>
+          <div class="card-body">
+            <h3>Tokyo, Japan</h3>
+            <p class="price">From $799</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Ankit Travel. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
