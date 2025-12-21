@@ -37,9 +37,10 @@ header p { font-size: 1.4rem; max-width: 800px; margin: 0 auto 40px; }
   border-radius: 8px;
   font-weight: 600;
   transition: all 0.3s;
+  color:rgb(53, 17, 97)
 }
 
-.tab.active { background: var(--primary); color: white; }
+.tab.active { background: var(--primary); color: rgb(24, 18, 18); }
 
 .search-form {
   background: white;
